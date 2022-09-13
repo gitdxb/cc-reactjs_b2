@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../public/img/glassesImage/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+.myContainer {
+  background-color: rgba(0, 0, 0, 0.354);
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav {
+  background-color: rgba(13, 9, 9, 0.629);
+  height: 120px;
+  z-index: 99;
+}
+.myTitle {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+img {
+  width: 220px;
+  height: 470px;
+  margin-top: 50px;
+}
+
+#glassesList .myItem {
+  height: 50px;
+  width: 50px;
 }
