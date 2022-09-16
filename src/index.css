@@ -23,7 +23,7 @@ code {
 
 nav {
   background-color: rgba(13, 9, 9, 0.629);
-  height: 120px;
+  height: 100px;
   z-index: 99;
 }
 .myTitle {
@@ -37,8 +37,30 @@ img {
   height: 470px;
   margin-top: 50px;
 }
+.leftIMG {
+  margin-left: 300px;
+}
+.rightIMG {
+  margin-right: 300px;
+}
 
-#glassesList .myItem {
-  height: 50px;
-  width: 50px;
+
+.glassesWrap {
+  height: 160px;
+  width: 760px;
+  background-color: white;
+  margin: auto;
+  margin-top: 50px;
+  padding: 25px 40px;
+  
+}
+.glassesWrap .col-2 {
+  align-self: center;
+  padding: 0;
+}
+.myItem {
+  height: 50%;
+  width: 50%;
+  padding: 0;
+  margin: 0;
 }
