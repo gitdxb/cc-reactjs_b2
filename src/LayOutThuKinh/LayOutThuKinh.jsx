@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import GlassesList from "./GlassesList";
 import Header from "./Header";
-import Model from "./Model";
 
 export default class LayOutThuKinh extends Component {
 
@@ -71,41 +69,63 @@ export default class LayOutThuKinh extends Component {
         }
     ]
 
+    // display glasses list to UI
     renderGlasses = () => {
         return this.dataGlasses.map((pair) => {
-            let {url} = pair;
+            let {id,url} = pair;
             return <div className="col-2" key={`glasses-${pair.id}`}>
             <img style={{cursor: 'pointer'}} onClick={() => {
-                this.glassesOn()
+                this.changeGlasses(pair)
             }} className="img-fluid" src={url} alt="" />
           </div>
         })
     }
 
-    glassesOn = (id) => {
-        return this.dataGlasses.map((eachPair) => {
-            if (eachPair.id === id) {
-                let { name,url, desc} = eachPair;
-                document.querySelector("#avatar").innerHTML = `
-                    <img src={url} alt=""/>
-                `;
-                document.querySelector("#glassesInfo").innerHTML = `
-                    <h2 class="myTitle">{name}</h2>
-                    <p>{desc}</p>
-                `;
-                document.querySelector("#glassesInfo").style.display = "block";
-            }
-        });
+    // click event to change glasses
+    changeGlasses = (pair) => {
+      this.setState({
+        glassesDetail: pair
+      })
+    }
+
+    // set giá trị mặc định đầu tiên
+    state = {
+        glassesDetail: {
+            "id": 1,
+            "price": 30,
+            "name": "GUCCI G8850U",
+            "url": "./glassesImage/v1.png",
+            "desc": "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. "
+        }
     }
 
     render() {
+        let {glassesDetail} = this.state;
         return (
         <div className="myContainer">
             <Header />
-            <div className="row">
-                <Model/>
-                <GlassesList/>
-            </div>
+                <div className="row">
+                    <div className="col-6">
+                        <div className="vglasses__card">
+                            <div className="vglasses__model" id="avatar">
+                                <img className="leftIMG img-fluid" src="./glassesImage/model.jpg" alt="" />
+                            </div>
+                            <div>
+                                <div className="glassesItem">
+                                    <img className="glassesLayer img-fluid" src={glassesDetail.url} alt="" />
+                                </div>
+                                <div id="glassesInfo" className="vglasses__info">
+                                    <h2 className="myTitle">{glassesDetail.name}</h2>
+                                    <p>{glassesDetail.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6">
+                        <img className="rightIMG img-fluid" src="./img/glassesImage/model.jpg" alt="" />
+                    </div>
+                </div>
+                
             <div className="glassesWrap">
                 <div className="row" id="glassesList">
                     {this.renderGlasses()}

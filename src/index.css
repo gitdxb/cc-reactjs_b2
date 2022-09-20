@@ -33,11 +33,15 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-img {
+.leftIMG, .rightIMG {
   width: 220px;
-  height: 470px;
+  height: 270px;
   margin-top: 50px;
 }
+#glassesList img {
+  padding:3px;
+}
+
 .leftIMG {
   margin-left: 300px;
 }
@@ -66,71 +70,36 @@ img {
   margin: 0;
 }
 
-
-
-
-/* MAIN CSS */
-/* .vglasses__left{
-  background-color: white;
-  padding: 20px 40px;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
-}
-.vglasses__left .col-4{
-  align-self: center;
-}
-.vglasses__items{
-  cursor: pointer;
-}
-
-.vglasses__right{
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
-}
-
-
-.vglasses__model img{
+.glassesItem img{
   position: absolute;
-  top: 32%;
-  left: 25%;
-  width: 238px;
-  height: 85px;
-  opacity: 0.9;
+  height: 43px;
+  width: 118px;
+  top: 36%;
+  left: 63%;
+  opacity: 0.8;
 }
 
 .vglasses__card{
   position: relative;
   overflow: hidden;
-  background-color: white;
 }
-
-.vglasses__info{
+.vglasses__info {
   position: absolute;
-  bottom:0;
-  left: 0;
+  bottom: 0;
+  right: 12%;
   background-color: rgba(0,0,0,0.7);
-  width: 100%;
+  width: 32.3%;
+}
+.vglasses__info h2 {
+  text-align: left;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size: 15px;
+}
+.vglasses__info p {
+  text-align: left;
+  margin-top: 8px;
+  font-size: 11px;
   color: white;
-  padding: 20px;
- display: none;
+  padding: 5px;
 }
-
-#glasses{
-  transition: all 0.5s;
-}
-#glassesInfo .myTitle {
-  font-size: 25px;
-}
-#glassesInfo .stockWrapper {
-  margin: 8px 0;
-}
-
-#glassesInfo .myPrice {
-  padding: 4px 7px;
-  border-radius: 4px;
-  color: white;
-  background-color: red;
-  margin-right: 3px;
-}
-#glassesInfo span {
-  color: rgb(7, 210, 7);
-  font-style: italic;
-} */
